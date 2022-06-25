@@ -2,7 +2,14 @@ plugins {
     id 'java'
     id 'io.qameta.allure' version '2.9.6'
 }
+compileJava.options.encoding = 'UTF-8'
 
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+test {
+    systemProperty "file.encoding", "utf-8"
+}
 repositories {
     mavenCentral()
 }
@@ -45,20 +52,8 @@ tasks.withType(Test) {
         }
     }
 }
-task properties_test6(type: Test) {
-    useJUnitPlatform{
-        includeTags "test6"
-    }
-}
-
-task hello_test(type: Test) {
-    useJUnitPlatform{
-        includeTags "hello"
-    }
-}
-
-task owner_test(type: Test) {
-    useJUnitPlatform{
-        includeTags "owner"
+task prop_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "test1"
     }
 }
