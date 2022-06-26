@@ -13,7 +13,9 @@ public class OwnerTest {
     void credentialTest() {
         String login = config.login();
         String password = config.password();
+        String baseUrl = config.baseUrl();
         System.out.println("Login: "+login);
         System.out.println("Password: "+password);
+        System.out.println("baseUrl: "+baseUrl);
     }
 }

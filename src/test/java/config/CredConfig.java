@@ -7,5 +7,7 @@ import org.aeonbits.owner.Config;
 public interface CredConfig extends Config {
     String login();
     String password();
+    String baseUrl();
+
 
 }
