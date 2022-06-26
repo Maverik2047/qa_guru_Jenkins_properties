@@ -43,7 +43,7 @@ dependencies {
 }
 
 tasks.withType(Test) {
-    systemProperties(System.getProperties())
+
     useJUnitPlatform()
 
 
@@ -57,5 +57,10 @@ tasks.withType(Test) {
 task prop_test(type: Test) {
     useJUnitPlatform {
         includeTags "test1"
+    }
+}
+task form_test(type: Test) {
+    useJUnitPlatform {
+        includeTags "formTest"
     }
 }

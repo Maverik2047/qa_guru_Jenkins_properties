@@ -2,6 +2,7 @@ package tests.demoqa;
 
 import io.qameta.allure.*;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
@@ -12,6 +13,7 @@ import static io.qameta.allure.Allure.step;
 public class RegistrationFormTests extends TestBase {
 
     @Test
+    @Tag("formTest")
     @Owner("Maverik2047")
     @Severity(SeverityLevel.NORMAL)
     @Feature("Сборка в Jenkins")
