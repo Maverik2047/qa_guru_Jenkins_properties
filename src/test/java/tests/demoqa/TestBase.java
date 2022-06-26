@@ -23,11 +23,9 @@ public class TestBase extends Attach {
 
         Configuration.browserCapabilities = capabilities;
         Configuration.baseUrl = config.baseUrl();
-        Configuration.browser = System.getProperty("browser", "opera");
-        Configuration.browserVersion = System.getProperty("version", "100");
-        Configuration.browserSize = System.getProperty("browserSize", "1366x768");
-        System.setProperty("selenide.browser", "firefox");
-
+        Configuration.browser = System.getProperty("browser", "chrome");
+        Configuration.browserSize = System.getProperty("version", "100");
+        Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
         Configuration.holdBrowserOpen = true;
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
     }
