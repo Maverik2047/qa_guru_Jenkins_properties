@@ -19,6 +19,7 @@ public class TestBase extends Attach {
         capabilities.setCapability("enableVideo", true);
 
         Configuration.browserCapabilities = capabilities;
+        System.setProperty("selenide.browser","firefox");
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.browserSize = "1800x900";
         Configuration.holdBrowserOpen = true;
