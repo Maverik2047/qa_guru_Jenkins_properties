@@ -4,8 +4,9 @@ import config.CredConfig;
 import org.aeonbits.owner.ConfigFactory;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
+import tests.demoqa.TestBase;
 
-public class OwnerTest {
+public class OwnerTest extends TestBase {
     CredConfig config = ConfigFactory.create(CredConfig.class);
 
     @Test
