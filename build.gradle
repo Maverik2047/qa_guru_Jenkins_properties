@@ -2,6 +2,8 @@ plugins {
     id 'java'
     id 'io.qameta.allure' version '2.9.6'
 }
+
+
 compileJava.options.encoding = 'UTF-8'
 
 tasks.withType(JavaCompile) {
@@ -44,7 +46,7 @@ dependencies {
 }
 
 tasks.withType(Test) {
-    systemProperties(System.getProperties())
+
     useJUnitPlatform()
 
 
